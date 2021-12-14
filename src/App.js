@@ -22,18 +22,25 @@ function App() {
 
       <h3>Simple data pagination</h3>
       
-      {  end === total 
+      {  
+      
+      end === total 
       ? <h4>No more Posts...</h4>
       : posts.slice(start,end).map( post => 
-
             <div className="info">
                 <p key={post.id}>{post.title}</p>
                 <p>{post.body}</p>
             </div> 
-
-          )
+        )
       }
-      <Pagination start={start} end={end} setStart={setStart} setEnd={setEnd} total={total} />
+
+      <Pagination 
+        start={start} 
+        end={end} 
+        setStart={setStart} 
+        setEnd={setEnd} 
+        total={total} 
+      />
     </div>
   );
 }
