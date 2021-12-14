@@ -22,7 +22,8 @@ function App() {
 
       <h3>Simple data pagination</h3>
       
-      {  end === total 
+      {  
+      end === total 
       ? <h4>No more Posts...</h4>
       : posts.slice(start,end).map( post => 
 
